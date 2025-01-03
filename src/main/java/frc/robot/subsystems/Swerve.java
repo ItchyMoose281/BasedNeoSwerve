@@ -2,6 +2,7 @@ package frc.robot.subsystems;
 
 import java.util.function.DoubleSupplier;
 
+import com.ctre.phoenix.sensors.Pigeon2;
 import com.kauailabs.navx.frc.AHRS;
 
 import edu.wpi.first.math.geometry.Pose2d;
@@ -22,10 +23,10 @@ public class Swerve extends SubsystemBase {
 
   private final SwerveDriveOdometry swerveOdometry;
 
-  private final AHRS gyro;
+  private final Pigeon2 gyro;
 
   public Swerve() {
-    gyro = new AHRS();
+    gyro = new Pigeon2(13);
 
     modules = new SwerveModule[] {
       new SwerveModule(0, Constants.kSwerve.MOD_0_Constants),
@@ -114,7 +115,7 @@ public class Swerve extends SubsystemBase {
   }
 
   private void zeroGyro() {
-    gyro.zeroYaw();
+    gyro.setYaw(0.0);
   }
 
   public Pose2d getPose() {

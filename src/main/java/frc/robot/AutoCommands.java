@@ -1,5 +1,5 @@
 
-package frc.robot;
+/*package frc.robot;
 
 import com.pathplanner.lib.PathPlanner;
 import com.pathplanner.lib.PathPlannerTrajectory;
@@ -15,14 +15,14 @@ import frc.robot.subsystems.Swerve;
 /**
  * This class generates auto commands.
  */
-public class AutoCommands {
+/*public class AutoCommands {
   private final Swerve swerve;
   private final SendableChooser<Command> dropDown;
 
   /**
    * Define all auto commands.
    */
-  public AutoCommands(Swerve swerve) {
+  /*public AutoCommands(Swerve swerve) {
     this.swerve = swerve;
 
     dropDown = new SendableChooser<>();
@@ -63,4 +63,4 @@ public class AutoCommands {
 
       swerve.drive(() -> 0.0, () -> 0.0, () -> 0.0, true, false));
   }
-}
+}*/

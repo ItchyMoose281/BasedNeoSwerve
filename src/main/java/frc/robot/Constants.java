@@ -26,7 +26,7 @@ public class Constants {
     public static final int TRANSLATION_Y_AXIS = XboxController.Axis.kLeftY.value;
     public static final int ROTATION_AXIS = XboxController.Axis.kRightX.value;
 
-    public static final int GYRO_RESET_BUTTON = XboxController.Button.kY.value;
+    public static final int GYRO_RESET_BUTTON = XboxController.Button.kStart.value;
 
     // Prevent from acclerating/decclerating to quick
     public static final SlewRateLimiter X_DRIVE_LIMITER = new SlewRateLimiter(4);
@@ -37,8 +37,8 @@ public class Constants {
   /** All swerve constants. */
   public static class kSwerve {
     /** Constants that apply to the whole drive train. */
-    public static final double TRACK_WIDTH = Units.inchesToMeters(19.5); // Width of the drivetrain measured from the middle of the wheels.
-    public static final double WHEEL_BASE = Units.inchesToMeters(19.5); // Length of the drivetrain measured from the middle of the wheels.
+    public static final double TRACK_WIDTH = Units.inchesToMeters(21.75); // Width of the drivetrain measured from the middle of the wheels.
+    public static final double WHEEL_BASE = Units.inchesToMeters(29.25); // Length of the drivetrain measured from the middle of the wheels.
     public static final double WHEEL_DIAMETER = Units.inchesToMeters(4);
     public static final double WHEEL_CIRCUMFERENCE = WHEEL_DIAMETER * Math.PI;
 
@@ -49,7 +49,7 @@ public class Constants {
       new Translation2d(-WHEEL_BASE / 2.0, -TRACK_WIDTH / 2.0)
     );
 
-    public static final double DRIVE_GEAR_RATIO = 6.75 / 1.0; // 6.75:1
+    public static final double DRIVE_GEAR_RATIO = 6.12 / 1.0; // 6.12:1
     public static final double DRIVE_ROTATIONS_TO_METERS = WHEEL_CIRCUMFERENCE / DRIVE_GEAR_RATIO;
     public static final double DRIVE_RPM_TO_METERS_PER_SECOND = DRIVE_ROTATIONS_TO_METERS / 60.0;
     public static final double ANGLE_GEAR_RATIO = 12.8 / 1.0; // 12.8:1
